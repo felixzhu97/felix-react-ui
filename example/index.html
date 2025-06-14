@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix UI 示例</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .demo-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: center;
+        }
+
+        .demo-input {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Felix UI 组件库示例</h1>
+
+        <div class="section">
+            <h2>按钮组件 (Button)</h2>
+            <div id="button-demo"></div>
+        </div>
+
+        <div class="section">
+            <h2>输入框组件 (Input)</h2>
+            <div id="input-demo"></div>
+        </div>
+
+        <div class="section">
+            <h2>卡片组件 (Card)</h2>
+            <div id="card-demo"></div>
+        </div>
+    </div>
+
+    <script type="text/babel">
+        // 这里应该导入你的组件库
+        // import { Button, Input, Card } from 'felix-ui';
+
+        // 由于这是一个简单的示例，我们创建一些模拟组件
+        const Button = ({ type = 'primary', size = 'medium', children, ...props }) => {
+            const className = `felix-button felix-button--${type} felix-button--${size}`;
+            return React.createElement('button', {
+                className, style: {
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    transition: 'all 0.2s ease-in-out',
+                    padding: size === 'small' ? '6px 12px' : size === 'large' ? '12px 20px' : '8px 16px',
+                    fontSize: size === 'small' ? '12px' : size === 'large' ? '16px' : '14px',
+                    backgroundColor: type === 'primary' ? '#1890ff' : type === 'danger' ? '#ff4d4f' : '#f5f5f5',
+                    color: type === 'secondary' ? '#333' : 'white',
+                    ...props.style
+                }, ...props
+            }, children);
+        };
+
+        // 按钮示例
+        const ButtonDemo = () => {
+            return React.createElement('div', null,
+                React.createElement('div', { className: 'demo-row' },
+                    React.createElement(Button, { type: 'primary' }, '主要按钮'),
+                    React.createElement(Button, { type: 'secondary' }, '次要按钮'),
+                    React.createElement(Button, { type: 'danger' }, '危险按钮')
+                ),
+                React.createElement('div', { className: 'demo-row' },
+                    React.createElement(Button, { size: 'small' }, '小按钮'),
+                    React.createElement(Button, { size: 'medium' }, '中等按钮'),
+                    React.createElement(Button, { size: 'large' }, '大按钮')
+                )
+            );
+        };
+
+        // 输入框示例
+        const InputDemo = () => {
+            const [value, setValue] = React.useState('');
+
+            return React.createElement('div', null,
+                React.createElement('div', { className: 'demo-row' },
+                    React.createElement('input', {
+                        className: 'felix-input demo-input',
+                        placeholder: '请输入内容',
+                        value: value,
+                        onChange: (e) => setValue(e.target.value),
+                        style: {
+                            padding: '8px 12px',
+                            border: '1px solid #d9d9d9',
+                            borderRadius: '6px',
+                            fontSize: '14px',
+                            outline: 'none',
+                            transition: 'border-color 0.2s'
+                        }
+                    })
+                )
+            );
+        };
+
+        // 卡片示例
+        const CardDemo = () => {
+            return React.createElement('div', {
+                style: {
+                    border: '1px solid #e8e8e8',
+                    borderRadius: '8px',
+                    overflow: 'hidden',
+                    background: 'white',
+                    maxWidth: '400px'
+                }
+            },
+                React.createElement('div', {
+                    style: {
+                        padding: '16px 20px',
+                        borderBottom: '1px solid #e8e8e8',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                    }
+                },
+                    React.createElement('h3', { style: { margin: 0, fontSize: '16px', fontWeight: 500 } }, '卡片标题'),
+                    React.createElement('a', { href: '#', style: { color: '#1890ff', textDecoration: 'none' } }, '更多')
+                ),
+                React.createElement('div', {
+                    style: { padding: '16px 20px', lineHeight: '1.6' }
+                }, '这是卡片的内容区域，可以放置任何内容。')
+            );
+        };
+
+        // 渲染示例
+        ReactDOM.render(React.createElement(ButtonDemo), document.getElementById('button-demo'));
+        ReactDOM.render(React.createElement(InputDemo), document.getElementById('input-demo'));
+        ReactDOM.render(React.createElement(CardDemo), document.getElementById('card-demo'));
+    </script>
+</body>
+
+</html>

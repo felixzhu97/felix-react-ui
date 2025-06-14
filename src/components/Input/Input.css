@@ -1,0 +1,138 @@
+.felix-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.felix-input-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.felix-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.felix-input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.felix-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.felix-input:hover:not(.felix-input--disabled) {
+  border-color: #40a9ff;
+}
+
+/* 大小样式 */
+.felix-input--small {
+  padding: 4px 8px;
+  font-size: 12px;
+  min-height: 24px;
+}
+
+.felix-input--medium {
+  padding: 6px 12px;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.felix-input--large {
+  padding: 8px 16px;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+/* 状态样式 */
+.felix-input--error {
+  border-color: #ff4d4f;
+}
+
+.felix-input--error:focus {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+.felix-input--warning {
+  border-color: #faad14;
+}
+
+.felix-input--warning:focus {
+  border-color: #faad14;
+  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+}
+
+.felix-input--disabled {
+  background-color: #f5f5f5;
+  color: #00000040;
+  cursor: not-allowed;
+}
+
+/* 前缀后缀样式 */
+.felix-input--with-prefix {
+  padding-left: 32px;
+}
+
+.felix-input--with-suffix {
+  padding-right: 32px;
+}
+
+.felix-input-prefix,
+.felix-input-suffix {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c8c8c;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.felix-input-prefix {
+  left: 8px;
+}
+
+.felix-input-suffix {
+  right: 8px;
+}
+
+.felix-input-clear {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c8c8c;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.felix-input-clear:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.felix-input-error {
+  font-size: 12px;
+  color: #ff4d4f;
+  margin-top: 4px;
+}

@@ -1,0 +1,114 @@
+.felix-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  user-select: none;
+}
+
+/* 大小样式 */
+.felix-button--small {
+  padding: 6px 12px;
+  font-size: 12px;
+  min-height: 28px;
+}
+
+.felix-button--medium {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.felix-button--large {
+  padding: 12px 20px;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+/* 类型样式 */
+.felix-button--primary {
+  background-color: #1890ff;
+  color: white;
+}
+
+.felix-button--primary:hover:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #40a9ff;
+}
+
+.felix-button--primary:active:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #096dd9;
+}
+
+.felix-button--secondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #d9d9d9;
+}
+
+.felix-button--secondary:hover:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+  color: #1890ff;
+}
+
+.felix-button--secondary:active:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #bae7ff;
+  border-color: #69c0ff;
+}
+
+.felix-button--danger {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.felix-button--danger:hover:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #ff7875;
+}
+
+.felix-button--danger:active:not(.felix-button--disabled):not(
+    .felix-button--loading
+  ) {
+  background-color: #d9363e;
+}
+
+/* 状态样式 */
+.felix-button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.felix-button--loading {
+  cursor: not-allowed;
+}
+
+.felix-button__spinner {
+  display: inline-block;
+  animation: felix-button-spin 1s linear infinite;
+}
+
+@keyframes felix-button-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,113 @@
+.felix-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.felix-card--bordered {
+  border: 1px solid #e8e8e8;
+}
+
+.felix-card--hoverable:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.felix-card--small .felix-card__header {
+  padding: 12px 16px;
+}
+
+.felix-card--small .felix-card__body {
+  padding: 12px 16px;
+}
+
+.felix-card--small .felix-card__actions {
+  padding: 8px 16px;
+}
+
+.felix-card__cover {
+  width: 100%;
+  overflow: hidden;
+}
+
+.felix-card__cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.felix-card__header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.felix-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.felix-card__extra {
+  color: #666;
+  font-size: 14px;
+}
+
+.felix-card__body {
+  padding: 16px 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.felix-card__actions {
+  border-top: 1px solid #e8e8e8;
+  background: #fafafa;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.felix-card__action {
+  flex: 1;
+  text-align: center;
+  padding: 0 12px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-right: 1px solid #e8e8e8;
+}
+
+.felix-card__action:last-child {
+  border-right: none;
+}
+
+.felix-card__action:hover {
+  color: #1890ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .felix-card__header {
+    padding: 12px 16px;
+  }
+
+  .felix-card__body {
+    padding: 12px 16px;
+  }
+
+  .felix-card__actions {
+    padding: 8px 0;
+  }
+
+  .felix-card__action {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+}
