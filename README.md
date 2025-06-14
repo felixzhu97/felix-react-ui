@@ -1,5 +1,12 @@
 # Felix UI
 
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/felix-ui?style=flat-square&logo=npm)](https://www.npmjs.com/package/felix-ui)
+[![Build and Test](https://img.shields.io/github/actions/workflow/status/your-username/felix-ui/ci.yml?branch=main&style=flat-square&logo=github&label=Build%20and%20Test)](https://github.com/your-username/felix-ui/actions)
+[![TypeScript](https://img.shields.io/badge/TypeScript-passing-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
+
 一个基于 React + TypeScript 的现代化组件库，提供简洁、美观、易用的基础组件。
 
 ## 特性
