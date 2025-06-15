@@ -2,8 +2,8 @@
 
 [![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
-[![npm version](https://img.shields.io/npm/v/felix-ui?style=flat-square&logo=npm)](https://www.npmjs.com/package/felix-ui)
-[![Build and Test](https://img.shields.io/github/actions/workflow/status/your-username/felix-ui/ci.yml?branch=main&style=flat-square&logo=github&label=Build%20and%20Test)](https://github.com/your-username/felix-ui/actions)
+[![npm version](https://img.shields.io/npm/v/felix-react-ui?style=flat-square&logo=npm)](https://www.npmjs.com/package/felix-react-ui)
+[![Build and Test](https://img.shields.io/github/actions/workflow/status/felixzhu97/felix-react-ui/ci.yml?branch=main&style=flat-square&logo=github&label=Build%20and%20Test)](https://github.com/felixzhu97/felix-react-ui/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-passing-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
 
@@ -21,18 +21,18 @@
 ## 安装
 
 ```bash
-npm install felix-ui
+npm install felix-react-ui
 # 或
-yarn add felix-ui
+yarn add felix-react-ui
 # 或
-pnpm add felix-ui
+pnpm add felix-react-ui
 ```
 
 ## 使用
 
 ```tsx
 import React from "react";
-import { Button, Input, Card } from "felix-ui";
+import { Button, Input, Card } from "felix-react-ui";
 
 function App() {
   return (
@@ -58,7 +58,7 @@ export default App;
 ### Button 按钮
 
 ```tsx
-import { Button } from "felix-ui";
+import { Button } from "felix-react-ui";
 
 <Button type="primary" size="large">
   主要按钮
@@ -76,7 +76,7 @@ import { Button } from "felix-ui";
 ### Input 输入框
 
 ```tsx
-import { Input } from "felix-ui";
+import { Input } from "felix-react-ui";
 
 <Input placeholder="请输入" allowClear prefix={<SearchIcon />} />;
 ```
@@ -94,7 +94,7 @@ import { Input } from "felix-ui";
 ### Card 卡片
 
 ```tsx
-import { Card } from "felix-ui";
+import { Card } from "felix-react-ui";
 
 <Card
   title="卡片标题"

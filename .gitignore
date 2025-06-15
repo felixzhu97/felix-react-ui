@@ -52,3 +52,6 @@ temp/
 
 # Storybook
 .storybook/
+
+# Docs
+docs/

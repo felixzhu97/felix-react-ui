@@ -8,7 +8,7 @@
 
 如果你发现了 bug 或有新的功能建议，请：
 
-1. 搜索现有的 [Issues](https://github.com/your-username/felix-ui/issues) 确保问题未被重复报告
+1. 搜索现有的 [Issues](https://github.com/your-username/felix-react-ui/issues) 确保问题未被重复报告
 2. 创建一个新的 Issue 并提供：
    - 清晰的问题描述
    - 重现步骤
@@ -35,8 +35,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/felix-ui.git
-cd felix-ui
+git clone https://github.com/your-username/felix-react-ui.git
+cd felix-react-ui
 
 # 安装依赖
 npm install
@@ -273,8 +273,8 @@ Closes #123
 
 如果你在贡献过程中遇到任何问题，请随时：
 
-- 在 [Discussions](https://github.com/your-username/felix-ui/discussions) 中提问
+- 在 [Discussions](https://github.com/your-username/felix-react-ui/discussions) 中提问
 - 联系维护者
-- 查看现有的 [Issues](https://github.com/your-username/felix-ui/issues) 和 [Pull Requests](https://github.com/your-username/felix-ui/pulls)
+- 查看现有的 [Issues](https://github.com/your-username/felix-react-ui/issues) 和 [Pull Requests](https://github.com/your-username/felix-react-ui/pulls)
 
 感谢你的贡献！🎉

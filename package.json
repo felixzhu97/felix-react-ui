@@ -1,5 +1,5 @@
 {
-  "name": "felix-ui",
+  "name": "felix-react-ui",
   "version": "1.0.0",
   "description": "一个基础的React组件库",
   "main": "dist/index.js",
@@ -31,11 +31,11 @@
     "typescript",
     "frontend"
   ],
-  "author": "your-name",
+  "author": "Felix Zhu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/felix-ui.git"
+    "url": "git+https://github.com/felixzhu97/felix-react-ui.git"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
