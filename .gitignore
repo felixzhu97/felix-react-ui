@@ -50,8 +50,5 @@ Thumbs.db
 tmp/
 temp/ 
 
-# Storybook
-.storybook/
-
 # Docs
 docs/
