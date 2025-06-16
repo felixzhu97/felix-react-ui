@@ -30,9 +30,12 @@ pnpm add felix-react-ui
 
 ## 使用
 
+### 导入组件和样式
+
 ```tsx
 import React from "react";
 import { Button, Input, Card } from "felix-react-ui";
+import "felix-react-ui/dist/index.css";
 
 function App() {
   return (
@@ -51,6 +54,32 @@ function App() {
 }
 
 export default App;
+```
+
+### 全局样式导入（推荐）
+
+在你的应用入口文件（如 `src/index.js` 或 `src/main.js`）中导入样式：
+
+```tsx
+// src/index.js 或 src/main.js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+// 全局导入 Felix UI 样式
+import "felix-react-ui/dist/index.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+```
+
+### 按需导入样式
+
+如果你使用的构建工具支持，也可以只导入特定组件的样式：
+
+```tsx
+import { Button } from "felix-react-ui";
+// 按需导入样式
+import "felix-react-ui/dist/components/Button/Button.css";
 ```
 
 ## 组件

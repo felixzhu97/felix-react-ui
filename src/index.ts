@@ -1,3 +1,8 @@
+// 导入全局样式
+import "./components/Button/Button.css";
+import "./components/Input/Input.css";
+import "./components/Card/Card.css";
+
 // 导出所有组件
 export { default as Button } from "./components/Button";
 export { default as Input } from "./components/Input";
